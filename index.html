@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Text Editor Component Demo</title>
+<style type="text/css">
+@import url('https://rsms.me/inter/inter.css');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+html { height: 100%; font-family: "Inter", sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: "Inter var", sans-serif; }
+}
+
+html, body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#demo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  height: 50%;
+}
+
+@media screen and (min-device-width: 800px) {
+  #demo-box {
+    width: 86ch;
+  }
+}
+
+#editor {
+  color: #edf7f6;
+  background-color: #2f4f4f;
+  border-radius: 4px;
+}
+</style>
+    <script src="./text-editor.component.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Text Editor Component</h1>
+      <div id="demo-box">
+        <text-editor id="editor">
+This textarea component is able to render line numbers using pure CSS.
+
+Further,
+
+- accessibility tools will pick it up as a simple, plain &lt;textarea&gt; ;
+- complete control over text rendering (syntax highlighting should be
+straightforward);
+- the text content is readily available as the `value` attribute;
+- any text between &lt;text-editor&gt; and &lt;/text-editor&gt; will be used as
+the initial field value;
+- behaves well on mobile.
+
+Using it in your page is as simple as
+
+  &lt;body&gt;
+
+      &lt;text-editor&gt; Edit me! &lt;/text-editor&gt;
+      &lt;script src="./text-editor.component.js" type="module"&gt;&lt;/script&gt;
+
+  &lt;/body&gt;
+        </text-editor>
+      </div>
+      <p>
+        get the source code from / complain to me via
+        <a href="//github.com/gatlin/text-editor-component">github</a>
+      </p>
+    </main>
+  </body>
+</html>
