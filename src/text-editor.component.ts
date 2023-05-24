@@ -6,7 +6,7 @@ class TextEditorComponent extends LitElement {
   @property()
   public id = "";
 
-  @property()
+  @property({ reflect: true })
   public value = "";
 
   /**

@@ -155,4 +155,4 @@ const Q=(t,i)=>"method"===i.kind&&i.descriptor&&!("value"in i.descriptor)?{...i,
     .editorslot {
       color: transparent;
     }
-  `,tt([X()],it.prototype,"id",void 0),tt([X()],it.prototype,"value",void 0),it=tt([(t=>i=>"function"==typeof i?((t,i)=>(window.customElements.define(t,i),i))(t,i):((t,i)=>{const{kind:s,elements:e}=i;return{kind:s,elements:e,finisher(i){window.customElements.define(t,i)}}})(t,i))("text-editor")],it);export{it as TextEditorComponent};
+  `,tt([X()],it.prototype,"id",void 0),tt([X({reflect:!0})],it.prototype,"value",void 0),it=tt([(t=>i=>"function"==typeof i?((t,i)=>(window.customElements.define(t,i),i))(t,i):((t,i)=>{const{kind:s,elements:e}=i;return{kind:s,elements:e,finisher(i){window.customElements.define(t,i)}}})(t,i))("text-editor")],it);export{it as TextEditorComponent};
