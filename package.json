@@ -1,6 +1,6 @@
 {
   "name": "text-editor-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a text editor web component",
   "author": "gatlin@niltag.net",
   "license": "AGPL-3.0",
@@ -15,6 +15,7 @@
     "format": "prettierx --config ./.prettierrc --offset-ternary-expressions --write src/**/*.ts",
     "lint": "eslint \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "example": "tsc -p tsconfig.json && concurrently -k -r \"tsc -p tsconfig.json --watch --preserveWatchOutput\" \"wds --node-resolve --watch\""
   },
   "dependencies": {
